@@ -2,6 +2,13 @@
 hello = "Hello"
 IO.puts hello
 
+# Lists and maps
+list = [1, 2, 3]
+map = %{"a" => 1, :b => 2}
+
+IO.inspect list
+IO.inspect map
+
 # Anonymous functions
 add_five = fn n -> n + 5 end
 add_ten = &(&1 + 10)
@@ -10,13 +17,6 @@ IO.puts( add_ten.( add_five.(15) ) ) # 30
 
 # Pipe operator
 15 |> add_five.() |> add_ten.() |> IO.puts
-
-# Lists and maps
-list = [1, 2, 3]
-map = %{"a" => 1, :b => 2}
-
-IO.inspect list
-IO.inspect map
 
 # Pattern matching
 {x, y, z} = {:Hello, :World, 2023}
